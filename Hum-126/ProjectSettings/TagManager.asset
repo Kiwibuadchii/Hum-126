@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - home_base
+  - ground
+  - carpet_portal
   layers:
   - Default
   - TransparentFX
