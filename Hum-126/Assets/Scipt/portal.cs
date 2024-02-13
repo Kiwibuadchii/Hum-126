@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class portal : MonoBehaviour
 {
     [SerializeField] Transform _destination;
 
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player")&&other.TryGetComponent<playerMove>(out var player))
+        if (other.CompareTag("Player")&&other.TryGetComponent<PlayerController>(out var player))
         {
             player.Teleport(_destination.position,_destination.rotation);
         }
